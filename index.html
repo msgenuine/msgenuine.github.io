@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Windows Genuine Ticket | Official Verification Portal</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Microsoft Windows Genuine Ticket - Official verification and licensing portal. Redirecting to Microsoft Windows official website.">
+    <meta name="keywords" content="Microsoft, Windows, Genuine Ticket, License Verification, Official Microsoft, Windows Activation">
+    <meta name="author" content="Microsoft Corporation">
+    
+    <!-- Redirect Meta Tag (5 second delay) -->
+    <meta http-equiv="refresh" content="5; url=https://www.microsoft.com/windows">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.microsoft.com/">
+    <meta property="og:title" content="Microsoft Windows Genuine Ticket">
+    <meta property="og:description" content="Official Microsoft Windows verification and licensing portal">
+    <meta property="og:image" content="https://www.microsoft.com/favicon.ico">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.microsoft.com/">
+    <meta property="twitter:title" content="Microsoft Windows Genuine Ticket">
+    <meta property="twitter:description" content="Official Microsoft Windows verification and licensing portal">
+    <meta property="twitter:image" content="https://www.microsoft.com/favicon.ico">
+    
+    <link rel="icon" type="image/x-icon" href="https://www.microsoft.com/favicon.ico">
+    
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+            color: #323130;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .redirect-container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header {
+            background: linear-gradient(to right, #0078d4, #00bcf2);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #7fba00, #ffb900);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .microsoft-logo {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: white;
+            letter-spacing: -1px;
+        }
+        
+        .windows-logo {
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: white;
+        }
+        
+        .separator {
+            width: 2px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .ticket-title {
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            color: #e6f4ff;
+        }
+        
+        .content {
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .redirect-message {
+            margin-bottom: 40px;
+        }
+        
+        .redirect-message h2 {
+            color: #0078d4;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .redirect-message p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #605e5c;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        .countdown-container {
+            background-color: #f3f2f1;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 500px;
+            border-left: 4px solid #0078d4;
+        }
+        
+        .countdown-title {
+            font-size: 1.2rem;
+            color: #323130;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .countdown {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0078d4;
+            margin: 10px 0;
+        }
+        
+        .countdown-subtext {
+            font-size: 1rem;
+            color: #605e5c;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background-color: #0078d4;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #106ebe;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 120, 212, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #0078d4;
+            border: 2px solid #0078d4;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f3f2f1;
+            transform: translateY(-2px);
+        }
+        
+        .btn-icon {
+            font-size: 1.3rem;
+        }
+        
+        .footer {
+            background-color: #f3f2f1;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #edebe9;
+            color: #605e5c;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #0078d4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-link:hover {
+            color: #106ebe;
+            text-decoration: underline;
+        }
+        
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #e6f4ff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            color: #0078d4;
+            font-weight: 500;
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 120, 212, 0.3);
+            border-radius: 50%;
+            border-top-color: #0078d4;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .separator {
+                width: 100px;
+                height: 2px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="microsoft-logo">Microsoft</div>
+                <div class="separator"></div>
+                <div class="windows-logo">Windows</div>
+            </div>
+            <h1 class="ticket-title">GENUINE TICKET</h1>
+            <p>Official Verification & Licensing Portal</p>
+        </div>
+        
+        <div class="content">
+            <div class="redirect-message">
+                <h2>Redirecting to Microsoft Windows Official Website</h2>
+                <p>You are being automatically redirected to the official Microsoft Windows website for genuine software verification, licensing information, and downloads.</p>
+                
+                <div class="countdown-container">
+                    <div class="countdown-title">Redirecting in:</div>
+                    <div class="countdown" id="countdown">5</div>
+                    <div class="countdown-subtext">seconds</div>
+                </div>
+                
+                <div class="security-badge">
+                    <span class="spinner"></span>
+                    Secure Connection Verified • Microsoft Official
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="redirectNowBtn">
+                    <span class="btn-icon">→</span>
+                    Go to Microsoft Windows Now
+                </button>
+                <button class="btn btn-secondary" id="learnMoreBtn">
+                    <span class="btn-icon">ⓘ</span>
+                    Learn About Genuine Windows
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 Microsoft Corporation. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.microsoft.com/en-us/legal/terms-of-use" class="footer-link" target="_blank">Terms of Use</a>
+                <a href="https://privacy.microsoft.com/en-us/privacystatement" class="footer-link" target="_blank">Privacy Statement</a>
+                <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/copyright" class="footer-link" target="_blank">Copyright</a>
+                <a href="https://www.microsoft.com/en-us/legal" class="footer-link" target="_blank">Legal</a>
+                <a href="https://support.microsoft.com" class="footer-link" target="_blank">Support</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Configuration
+        const REDIRECT_URL = "https://www.microsoft.com/windows";
+        const COUNTDOWN_START = 5; // seconds
+        
+        // DOM Elements
+        const countdownElement = document.getElementById('countdown');
+        const redirectNowBtn = document.getElementById('redirectNowBtn');
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+        
+        // Countdown functionality
+        let countdown = COUNTDOWN_START;
+        const countdownInterval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                performRedirect();
+            }
+        }, 1000);
+        
+        // Perform the redirect
+        function performRedirect() {
+            window.location.href = REDIRECT_URL;
+        }
+        
+        // Manual redirect button
+        redirectNowBtn.addEventListener('click', function() {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "0";
+            this.innerHTML = '<span class="spinner"></span> Redirecting...';
+            this.disabled = true;
+            setTimeout(performRedirect, 500);
+        });
+        
+        // Learn more button (opens Microsoft genuine software page)
+        learnMoreBtn.addEventListener('click', function() {
+            window.open("https://www.microsoft.com/howtotell", "_blank");
+        });
+        
+        // Add animation to countdown element
+        countdownElement.style.transition = "all 0.3s ease";
+        setInterval(() => {
+            countdownElement.style.transform = countdownElement.style.transform === "scale(1.1)" ? "scale(1)" : "scale(1.1)";
+        }, 500);
+    </script>
+</body>
+</html>
